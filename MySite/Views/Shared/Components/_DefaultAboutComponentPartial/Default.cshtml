@@ -1,0 +1,37 @@
+﻿@using MySite.Models
+@model TblAbout
+<section class="py-24 bg-white dark:bg-surface-dark/30" id="about">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 flex items-center gap-4">
+            <span class="w-12 h-1 bg-primary rounded-full"></span>
+            @Model.AboutTitle
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300">
+                @Model.AboutDescription
+                <div class="grid grid-cols-3 gap-6 pt-6">
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">05+</h4>
+                        <p class="text-sm text-slate-500">Years Experience</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-secondary-accent">50+</h4>
+                        <p class="text-sm text-slate-500">Projects Completed</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">20+</h4>
+                        <p class="text-sm text-slate-500">Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary-accent rounded-2xl rotate-3 group-hover:rotate-6 transition-transform opacity-20">
+                </div>
+                <img alt="Laptop with code on screen on a minimalist desk"
+                     class="relative rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 w-full object-cover h-80 md:h-96"
+                     data-alt="Laptop with code on screen on a minimalist desk"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEYrn9AEs0CMY4XdORE6lCCvYa_rvXfeECmloq7bZZb95SaQYkrdOfOTp8H3OM-KxkMvIvESYLI-7wwxjiK4OVVOKnYn8_uOw9k_brnq57X47ttruvWlnALouzVZajyB0JdHqYF5PWoJyqaxky8iG7tsa3uDxwR9yPBQMb1XwjTJ4M4FxdgAlJhTNFqcSosnaMWqAtlW40lP8n4bLwpKjpFwLKSU4glQHCSo4kmnT0UvnKxFdw4b7_tYkpzBhqrcmtE6hmAx74Z2Y" />
+            </div>
+        </div>
+    </div>
+</section>

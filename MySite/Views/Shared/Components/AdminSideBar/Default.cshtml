@@ -1,0 +1,89 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="sidebar">
+    <div class="brand">
+        <div class="brand-icon">
+            <i class="ri-stack-fill"></i>
+        </div>
+        <div class="brand-text">
+            <h1>Admin Paneli</h1>
+            <p>PORTFOLYO YÖNETİMİ</p>
+        </div>
+    </div>
+
+    <div class="menu-label">SAYFALAR</div>
+
+    <nav>
+        <div class="nav-item">
+            <a class="nav-link active" onclick="switchTab('dashboard', this)">
+                <i class="ri-dashboard-line"></i>
+                <span>Dashboard</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('ana-bilgiler', this)">
+                <i class="ri-article-line"></i>
+                <span>Ana Bilgiler</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('hakkimda', this)">
+                <i class="ri-user-line"></i>
+                <span>Hakkında</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('deneyimler', this)">
+                <i class="ri-briefcase-line"></i>
+                <span>Deneyimler</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('egitim', this)">
+                <i class="ri-graduation-cap-line"></i>
+                <span>Eğitim</span>
+            </a>
+        </div>
+        <!-- Placeholders for other items mentioned -->
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('yetenekler', this)">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Yetenekler</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('sertifikalar', this)">
+                <i class="ri-award-line"></i>
+                <span>Sertifikalar</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('projeler', this)">
+                <i class="ri-rocket-line"></i>
+                <span>Projeler</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" onclick="switchTab('iletisim', this)">
+                <i class="ri-mail-line"></i>
+                <span>İletişim</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="user-profile">
+        <div class="user-avatar">
+            <i class="ri-user-smile-line"></i>
+        </div>
+        <div class="user-info">
+            <h4>Admin</h4>
+            <p>Site Yöneticisi</p>
+        </div>
+        <i class="ri-logout-box-r-line" style="margin-left: auto; color: var(--text-muted); cursor: pointer;"></i>
+    </div>
+</div>
+
+

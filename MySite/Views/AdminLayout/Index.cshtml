@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    @await Component.InvokeAsync("AdminHead")
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    @await Component.InvokeAsync("AdminSideBar")
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- DASHBOARD SECTION -->
+        @await Component.InvokeAsync("AdminDashboardSection")
+
+        <!-- ANA BİLGİLER SECTION -->
+        @await Component.InvokeAsync("AdminHomePage")
+        
+           @RenderBody()
+
+            
+
+
+        <!-- HAKKINDA SECTION -->
+        @await Component.InvokeAsync("AdminAbout")
+
+        <!-- DENEYİMLER SECTION -->
+        @await Component.InvokeAsync("AdminExperience")
+
+        <!-- EĞİTİM SECTION -->
+        @await Component.InvokeAsync("AdminEducation")
+
+        <!-- Other placeholder sections can be set to simple generic views -->
+        <!-- YETENEKLER SECTION -->
+        @await Component.InvokeAsync("AdminSkill")
+
+        <!-- SERTİFİKALAR SECTION -->
+        @await Component.InvokeAsync("AdminCertificate")
+
+        <!-- PROJELER SECTION -->
+        @await Component.InvokeAsync("AdminProject")
+
+        <!-- İLETİŞİM SECTION -->
+        @await Component.InvokeAsync("AdminContact")
+
+    </div>
+
+    <script>
+        function switchTab(tabId, element) {
+            // Hide all sections
+            document.querySelectorAll('.section-view').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show target section
+            document.getElementById(tabId).classList.add('active');
+
+            // Update nav active state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Set date
+        const dateElement = document.getElementById('currentDate');
+        if (dateElement) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.innerText = new Date().toLocaleDateString('tr-TR', options);
+        }
+    </script>
+</body>
+
+</html>

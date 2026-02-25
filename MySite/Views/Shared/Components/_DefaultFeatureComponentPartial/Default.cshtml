@@ -1,0 +1,36 @@
+﻿
+<section class="min-h-screen flex items-center pt-20 relative overflow-hidden" id="home">
+    <!-- Background Decor -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
+    <div class="absolute bottom-20 left-0 w-80 h-80 bg-secondary-accent/10 rounded-full blur-[80px] -z-10"></div>
+    <div class="container mx-auto px-6 text-center z-10">
+        <div class="mb-8 inline-block relative group">
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary-accent mx-auto">
+                <img alt="Professional headshot of a smiling man"
+                     class="w-full h-full object-cover rounded-full border-4 border-background-light dark:border-background-dark"
+                     data-alt="Professional headshot of a smiling man"
+                     src="@Model.ImageUrl" />
+            </div>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
+            <span class="text-slate-900 dark:text-white">@Model.FeatureTitle</span>
+        </h1>
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 text-gradient">
+            @Model.FeatureName
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+            @Model.FeatureDescription
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a class="px-8 py-3.5 bg-primary hover:bg-yellow-500 text-slate-900 font-semibold rounded-full shadow-glow transition-all flex items-center gap-2 group"
+               href="#projects">
+                View My Work
+                <span class="material-icons-round group-hover:translate-y-1 transition-transform">arrow_downward</span>
+            </a>
+            <a class="px-8 py-3.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-semibold rounded-full transition-all"
+               href="#contact">
+                Contact Me
+            </a>
+        </div>
+    </div>
+</section>

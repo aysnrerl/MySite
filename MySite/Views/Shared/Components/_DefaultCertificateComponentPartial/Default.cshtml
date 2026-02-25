@@ -1,0 +1,35 @@
+﻿@model List<MySite.Models.TblCertificate>
+
+<section class="py-24" id="certificates">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 flex items-center justify-center gap-4">
+            <span class="material-icons-round text-slate-400 text-3xl">workspace_premium</span>
+            Certificates
+        </h2>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            @foreach (var item in Model)
+            {
+                <div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 hover:border-primary/50 transition-colors shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 flex items-center justify-center shrink-0">
+                        <span class="material-icons-round">emoji_events</span>
+                    </div>
+                    <div>
+                        <div class="font-bold text-lg text-slate-900 dark:text-white">
+                            @item.CertificateName
+                        </div>
+                        <div class="text-sm text-slate-500 mt-1">
+                            @item.OrganizationName
+                        </div>
+                        <div class="text-sm text-slate-500 mt-1">
+                            @item.CertificateYear
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+﻿@model List<MySite.Models.TblSkill>
+<section class="py-24 bg-white dark:bg-surface-dark/30" id="skills">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10 flex items-center justify-center gap-4">
+            <span class="material-icons-round text-secondary-accent text-3xl">psychology</span>
+            Skills
+        </h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8">
+                <!-- Skill Item -->
+                @foreach (var item in Model)
+                {
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-medium">
+                            <span>@item.SkillName</span>
+                            <span class="text-primary">@item.SkillPercent%</span>
+                        </div>
+                        <div class="h-2 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-primary to-secondary-accent w-[95%] rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                
+            </div>
+            <!-- Tools Grid -->
+            <div class="mt-12 text-center">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-6">Other Tools</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">Git</span>
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">Figma</span>
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">Postman</span>
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">Jira</span>
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">
+                        VS
+                        Code
+                    </span>
+                    <span class="px-4 py-2 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-full text-sm hover:border-primary transition-colors cursor-default shadow-sm">Webpack</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
